@@ -15,6 +15,34 @@ module.exports = {
   },
 
   module: {
+    preLoaders: [
+
+      /*
+       * Tslint loader support for *.ts files
+       *
+       * See: https://github.com/wbuchwalter/tslint-loader
+       */
+      // { test: /\.ts$/, loader: 'tslint-loader', exclude: [ helpers.root('node_modules') ] },
+
+      /*
+       * Source map loader support for *.js files
+       * Extracts SourceMaps for source files that as added as sourceMappingURL comment.
+       *
+       * See: https://github.com/webpack/source-map-loader
+       */
+      {
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        exclude: [
+          // these packages have problems with their sourcemaps
+          helpers.root('node_modules/rxjs'),
+          helpers.root('node_modules/@angular'),
+          helpers.root('node_modules/@ngrx'),
+          helpers.root('node_modules/@angular2-material')
+        ]
+      }
+
+    ],
     loaders: [
       {
         include: /\.pug/,
