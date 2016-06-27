@@ -17,6 +17,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        include: /\.pug/,
+        loader: 'pug-html-loader'
+      },
+      {
         test: /\.ts$/,
         loader: 'ts'
       },
