@@ -43,3 +43,4 @@ jspm_packages
 .typingsrc
 dist
 .idea
+typings
