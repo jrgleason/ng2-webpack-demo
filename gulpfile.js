@@ -8,7 +8,7 @@ gulp.task('default', function() {
                 return 'app.js'
             }
             else{
-                file.extname = js;
+                file.extname = 'js';
             }
         }))
         .pipe(webpack())
