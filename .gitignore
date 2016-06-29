@@ -44,3 +44,5 @@ jspm_packages
 dist
 .idea
 typings
+public/javascripts
+public/stylesheets/style.css
