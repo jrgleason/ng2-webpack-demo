@@ -3,10 +3,10 @@ var gulp = require('gulp'),
     debug = require('gulp-debug'),
     named = require('vinyl-named');
 gulp.task('default', function() {
-    return gulp.src(['src/polyfills.js', 'src/vendor.ts', 'src/main.ts'])
+    return gulp.src(['src/polyfills.ts', 'src/vendor.ts', 'src/app.ts'])
         .pipe(debug())
-        .pipe(named(function(file){
-        }))
+        .pipe(named())
         .pipe(debug())
-        .pipe(webpack())
+        .pipe(webpack( require('./webpack.config.js') ))
+        .pipe(gulp.dest('dist/'));
 });

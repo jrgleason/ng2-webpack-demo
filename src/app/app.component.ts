@@ -5,7 +5,7 @@ import { NavbarComponent } from "./navbar/navbar.component"
 import { ShowcaseComponent } from "./showcase/showcase.component"
 @Component({
     selector: 'my-app',
-    template: require('./app.component.pug'),
+    template: String(require('./app.component.pug')),
     styles: [String(require('./app.component.styl'))],
     directives: [
         MD_ICON_DIRECTIVES, NavbarComponent, ShowcaseComponent
@@ -16,5 +16,4 @@ export class AppComponent {
     constructor(){
 
     }
-    test = require('./app.component.styl');
 }
