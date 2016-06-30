@@ -42,3 +42,7 @@ jspm_packages
 .project
 .typingsrc
 dist
+.idea
+typings
+public/javascripts
+public/stylesheets/style.css
