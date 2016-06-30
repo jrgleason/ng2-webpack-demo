@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 // TODO: We should really package this somehow.
-app.use("/angular-layouts.css", express.static(__dirname + "/node_modules/angular-material/layouts/angular-material.layouts.css"));
+app.use("/material-layouts.css", express.static(__dirname + "/node_modules/angular-material/layouts/angular-material.layouts.css"));
 
 app.use('/', routes);
 app.use('/users', users);
