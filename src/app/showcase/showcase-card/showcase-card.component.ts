@@ -6,6 +6,5 @@ import {Component, Input} from '@angular/core';
 })
 export class ShowcaseCardComponent{
     @Input() card = { headerText : "No Header Text" };
-    @Input() number = 0;
     constructor(){ }
 }

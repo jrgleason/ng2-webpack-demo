@@ -17,23 +17,23 @@ export class ShowcaseComponent implements OnDestroy{
         {
             number: 0,
             color: "blue",
-            headerText: "Card1"
+            content: "<h1>Card1</h1>"
         },
         {
             number: 1,
-            headerText: "Card2"
+            content: "<h1>Card2</h1>"
         }
     ];
     constructor(wheelService: WheelService){
         this.subscription = wheelService.wheelEmitter.subscribe((data: any) => {
-           if(data.direction > 0){
+           if(data.direction > 0 && this.currentCard !== (this.cards.length-1)){
                this.currentCard++;
            }
-           else if(this.currentCard){
+           else if(data.direction < 0 && this.currentCard){
                this.currentCard--;
            }
-           console.log("Current Card "+this.currentCard);
-        })
+           console.log("Current Card "+this.currentCard+" of "+this.cards.length);
+        }, this)
     };
     ngOnDestroy() {
         this.subscription.dispose();

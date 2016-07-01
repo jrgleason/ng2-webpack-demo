@@ -5,6 +5,12 @@ jg-showcase-card
   top: 0px
   left: 0px
   display:block
-  background-color: white;
+jg-showcase-card.active
+  -webkit-transition: top 0.5s; /* Safari */
+  transition: top 0.5s;
+jg-showcase-card.awaiting
+  top: 100%
+  -webkit-transition: top 0.5s; /* Safari */
+  transition: top 0.5s;
 jg-showcase-card.pushed
-  top: -100%
+  top: -170%
