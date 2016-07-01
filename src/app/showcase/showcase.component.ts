@@ -32,7 +32,6 @@ export class ShowcaseComponent implements OnDestroy{
            else if(data.direction < 0 && this.currentCard){
                this.currentCard--;
            }
-           console.log("Current Card "+this.currentCard+" of "+this.cards.length);
         }, this)
     };
     ngOnDestroy() {
