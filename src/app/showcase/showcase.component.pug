@@ -1,8 +1,5 @@
 .showcase-header
-.showcase-content.layout-column.layout-align-start-center
-  h1 Hello from Angular 2 App with Webpack
-  h2 Now with Pug!
-  h2
-    span
-      md-icon home
-    span And Angular2-Material
+.showcase-content
+  jg-showcase-card(*ngFor="let card of cards; let i = index",
+                     [card]="card", [number]="i", [class.pushed]="i < currentCard",
+                     [class.awaiting]= "i > currentCard", [class.active] = "i === currentCard") {{card.content}}
