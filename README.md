@@ -4,6 +4,6 @@ This is a simple Angular 2 project with the code taken [from the Angular 2 site]
 
 ```
 npm install
-npm build
+webpack
 ./bin/www //May be diff for windows.
 ```
