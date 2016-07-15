@@ -2,4 +2,4 @@
 .showcase-content
   jg-showcase-card(*ngFor="let card of cards; let i = index",
                      [card]="card", [number]="i", [class.pushed]="i < currentCard",
-                     [class.awaiting]= "i > currentCard", [class.active] = "i === currentCard") {{card.content}}
+                     [class.awaiting]= "i > currentCard", [class.active] = "i === currentCard")
