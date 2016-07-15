@@ -9,3 +9,4 @@ import '@angular/router-deprecated';
 import 'rxjs';
 // Angular 2 Material
 import "@angular2-material/icon";
+require("ftscroller/lib/ftscroller.js");

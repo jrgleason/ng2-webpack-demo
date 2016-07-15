@@ -7,12 +7,23 @@ For ref: http://stackoverflow.com/questions/26326958/stopping-mousewheel-event-f
 export class WheelService {
     wheelEmitter = new EventEmitter();
     private prevTime = new Date().getTime();
+    private reset = true;
     constructor(){
+        // TODO: Get this working
+        // var scroller = new FTScroller(window, {});
         window.addEventListener("wheel", (e: any) => {
           var curTime = new Date().getTime();
           if(this.prevTime){
             var timeDiff = curTime-this.prevTime;
-            if(timeDiff>500 && e.deltaY !== 0){
+            if(timeDiff>1000){
+              if(e.deltaY === 0) {
+                this.reset = true;
+              }
+              else if(this.reset){
+                let direction = e.deltaY < 0 ? -1 : 1;
+                this.wheelEmitter.emit({direction: direction});
+                this.reset = false;
+              }
               let direction = e.deltaY < 0 ? -1 : 1;
               this.wheelEmitter.emit({direction: direction});
               this.prevTime = curTime;

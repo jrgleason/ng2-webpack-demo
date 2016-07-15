@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MD_ICON_DIRECTIVES, MdIconRegistry} from "@angular2-material/icon";
+import { CardsService } from "../cards/cards.service";
 // TODO: there has got to be a way to make this 1 import statement instead of 2
 import { NavbarComponent } from "./navbar/navbar.component"
 import { ShowcaseComponent } from "./showcase/showcase.component"
@@ -13,8 +14,8 @@ import { ShowcaseComponent } from "./showcase/showcase.component"
     viewProviders: [ MdIconRegistry ]
 })
 export class AppComponent {
-    cards = require('./jg/cards/cards.json');
-    constructor(){
-        console.log(this.cards.config);
+    cards : any[];
+    constructor(cardsService : CardsService){
+        this.cards = cardsService.cards
     }
 }
