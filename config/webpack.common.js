@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts', '.pug', '.json', '.styl']
   },
 
   module: {
@@ -44,6 +44,10 @@ module.exports = {
 
     ],
     loaders: [
+      {
+        include: /\.json/,
+        loader: "json"
+      },
       {
         include: /\.pug/,
         loader: 'pug-html-loader'

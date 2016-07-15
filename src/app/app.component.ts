@@ -13,7 +13,8 @@ import { ShowcaseComponent } from "./showcase/showcase.component"
     viewProviders: [ MdIconRegistry ]
 })
 export class AppComponent {
+    cards = require('./jg/cards/cards.json');
     constructor(){
-
+        console.log(this.cards.config);
     }
 }

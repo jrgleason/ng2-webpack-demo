@@ -1,4 +1,5 @@
-.jg-navbar.layout.layout-align-space-between.tall
-  md-icon([ngStyle]="{'font-size': iconSize}") Home
-  div(md-mini-fab)
-    md-icon menu
+.layout([ngStyle]="{'line-height': iconSize}")
+  div.flex.layout.layout-align-start-center
+    md-icon([ngStyle]="{'font-size': iconSize}") home
+  div.flex.layout.layout-align-end-center
+    md-icon([ngStyle]="{'font-size': iconSize}") menu
