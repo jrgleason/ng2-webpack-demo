@@ -1,6 +1,9 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
+/*
+For ref: http://stackoverflow.com/questions/26326958/stopping-mousewheel-event-from-happening-twice-in-osx
+ */
 export class WheelService {
     wheelEmitter = new EventEmitter();
     private prevTime = new Date().getTime();
