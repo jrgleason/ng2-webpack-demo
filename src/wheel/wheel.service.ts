@@ -19,7 +19,7 @@ export class WheelService {
               if(e.deltaY === 0) {
                 this.reset = true;
               }
-              else if(this.reset){
+              else if(this.reset && e.deltaY > 10 || e.deltaY < -10){
                 let direction = e.deltaY < 0 ? -1 : 1;
                 this.wheelEmitter.emit({direction: direction});
                 this.reset = false;

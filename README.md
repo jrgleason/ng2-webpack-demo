@@ -7,3 +7,5 @@ npm install
 webpack
 ./bin/www //May be diff for windows.
 ```
+
+Basically the way the cool kids are doing it.
