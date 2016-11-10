@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'app': './src/app.ts'
+    'app': './src/main.ts'
   },
 
   resolve: {
@@ -50,11 +50,11 @@ module.exports = {
       },
       {
         include: /\.pug/,
-        loader: 'pug-html-loader'
+        loaders: ['to-string', 'pug-html-loader']
       },
       {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
+        loaders: ['to-string','css','stylus']
       },
       {
         test: /\.ts$/,

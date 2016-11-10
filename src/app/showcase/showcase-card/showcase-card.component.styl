@@ -1,20 +1,20 @@
-jg-showcase-card
+:host
   width: 100%
   height: 100%
   display:block
   position: absolute
-  .splash
+  /deep/ .splash
     height: 100%
     position: absolute
     left: 0
     top: 0
     width: 100%
-jg-showcase-card.active
+:host.active
   -webkit-transition: top 0.5s; /* Safari */
   transition: top 0.5s;
-jg-showcase-card.awaiting
+:host.awaiting
   top: 100%
   -webkit-transition: top 0.5s; /* Safari */
   transition: top 0.5s;
-jg-showcase-card.pushed
+:host.pushed
   top: -170%

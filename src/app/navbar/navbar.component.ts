@@ -1,12 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
-import {MD_ICON_DIRECTIVES} from "@angular2-material/icon/icon";
 @Component({
     selector: 'jg-navbar',
-    template: String(require('./navbar.component.pug')),
-    styles: [String(require('./navbar.component.styl'))],
-    directives: [MD_ICON_DIRECTIVES],
-    viewProviders: [MdIconRegistry]
+    template: require('./navbar.component.pug'),
+    styles: [require('./navbar.component.styl')],
 })
 export class NavbarComponent{
     @Input() iconSize = "40px";
